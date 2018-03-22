@@ -10,6 +10,7 @@
 
 @interface PHFDelegateChain : NSProxy
 
++ (instancetype)chainOfDelegates:(NSArray *)chain;
 + (id)delegateChainWithObjects:(id)firstObject, ... NS_REQUIRES_NIL_TERMINATION;
 - (id)__initWithObjectsInArray:(NSArray *)objects;
 

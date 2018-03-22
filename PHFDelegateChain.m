@@ -24,6 +24,10 @@ const CFArrayCallBacks kPHFWeakArrayCallBacks = {0, NULL, NULL, CFCopyDescriptio
 
 @synthesize breaking = _breaking;
 
++ (instancetype)chainOfDelegates:(NSArray *)chain {
+    return [[[self class] alloc] __initWithObjectsInArray:chain];
+}
+
 + (id)delegateChainWithObjects:(id)firstObject, ... {
     NSMutableArray *objects = [NSMutableArray array];
     va_list args;
